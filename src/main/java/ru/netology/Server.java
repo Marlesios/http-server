@@ -16,7 +16,6 @@ public class Server {
                 ExecutorService executorService = Executors.newFixedThreadPool(60);
                 ConnectionHandler connectionHandler = new ConnectionHandler(socket);
                 executorService.submit(connectionHandler);
-                System.out.println("Server has started");
             }
         } catch (IOException e) {
             e.printStackTrace();
